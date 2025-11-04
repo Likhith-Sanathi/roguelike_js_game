@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<a href="{{ url_for('game') }}">Game</a>
+<a href="{{ url_for('logout') }}">Logout</a>
+<a href="{{ url_for('leaderboard') }}">Leaderboard</a>
+{% endblock %}
+
+{% block body_id %}attributions{% endblock %}
+
+{% block content %}
+
+<h1>Attributions</h1>
+
+<ul>
+    <li>Font used - <a href='https://fonts.google.com/specimen/Pixelify+Sans'>Pixelify Sans. by Google.</a></li>
+    <li>Tileset used - <a href='https://https://elvgames.itch.io/cellar-tileset-16x16-pixelartl'>Free Dungeon Tileset 16x16 by ElvGames.</a></li>
+    <li>Character sprite used - <a href='https://sscary.itch.io/the-adventurer-female'>The Adventurer Female by sscary.</a></li>
+    <li>Music and sfx used - <a href='https://leohpaz.itch.io/minifantasy-dungeon-sfx-pack'>Minifantasy Dungeon SFX Pack by leohpaz.</a></li>
+    <li>Projectile sprites used - <a href='https://polar-34.itch.io/projectiles'>Projectiles by Polar.</a> </li>
+    <li>Dragon sprites used - <a href='https://deepdivegamestudio.itch.io/dragon-asset-pack'>Dragon Asset Pack by Deep Dive Game Studio.</a></li>
+    <li>line 153-226 in app.py -
+        <ul>
+            <li><a href='https://www.geeksforgeeks.org/use-jsonify-instead-of-json-dumps-in-flask/'>Use jsonify() instead of json.dumps() in Flask</a></li>
+            <li><a href='https://www.geeksforgeeks.org/how-to-return-a-json-response-from-a-flask-api/'>How to return a JSON response from a Flask API ?</a></li>
+        </ul>
+    </li>
+    <li>line 195-239 in game.js -
+        <ul>
+            <li><a href='https://www.w3schools.com/Xml/ajax_intro.asp'>AJAX Introduction</a></li>
+            <li><a href='https://dariancabot.com/2010/11/09/jquery-using-ajax-inside-a-loop-and-variable-scope/'>Using .ajax() inside a loop and variable scope</a></li>
+        </ul>
+    </li>
+</ul>
+
+{% endblock %}

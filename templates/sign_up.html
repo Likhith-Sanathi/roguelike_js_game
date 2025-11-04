@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<a href="{{ url_for('index') }}">Home</a>
+<a href="{{ url_for('login') }}">Login</a>
+{% endblock %}
+
+{% block body_id %}sign_up{% endblock %}
+
+{% block content %}
+<h1>Sign Up</h1>
+<form method="POST" action ='' novalidate>
+    {{ form.hidden_tag() }}
+    <div>
+    {{ form.username.label }} 
+    {{ form.username() }}
+    {% for error in form.username.errors %}
+        {{ error }}
+    {% endfor %}
+    {{ username_error }}
+    </div>
+    <div>
+    {{ form.password.label }} 
+    {{ form.password() }}
+    {% for error in form.password.errors %}
+        {{ error }}
+    {% endfor %}
+    </div>
+    {{ form.submit() }}
+    {{ success_message }}
+</form>
+{% endblock %}

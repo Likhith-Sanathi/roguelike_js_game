@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block head %}
+<!-- Additional head elements can go here if needed -->
+{% endblock %}
+
+{% block body_id %}game-page{% endblock %}
+{% block body_class %}escape-room{% endblock %}
+
+{% block nav %}
+<div>
+<p>wasd/arrows - movement, space - attack, f11 - fullscreen</p>
+<div>
+<a href="{{ url_for('index') }}">Home</a>
+<a href="{{ url_for('leaderboard') }}">Leaderboard</a>
+<a href="{{ url_for('logout') }}">Logout</a>
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<canvas id="canvas"></canvas>
+<div>
+    <p id="score">Score: <span id="scoreValue">0</span></p>
+    <div id="gameOverContainer">
+        <p id="gameOverMessage">GAME OVER <a id="replayButton">REPLAY</a></p>
+    </div>
+    <p id="time">Time: <span id="timeValue">0</span></p>
+</div>
+{% endblock %}
